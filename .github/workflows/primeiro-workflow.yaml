@@ -16,36 +16,36 @@ jobs:
       - name: Build Aplicacao
         run: echo "Buildando a Aplicacao!"
 
-dev:
-  runs-on: ubuntu-latest
-  needs: build
+  dev:
+    runs-on: ubuntu-latest
+    needs: build
 
-  steps:
-    - name: Fase de Desenvolvimento
-      run: echo "Deploy no ambiente de Desenvolvimento!"
+    steps:
+      - name: Fase de Desenvolvimento
+        run: echo "Deploy no ambiente de Desenvolvimento!"
 
-qa:
-  runs-on: ubuntu-latest
-  needs: build
+  qa:
+    runs-on: ubuntu-latest
+    needs: build
 
-  steps: 
-    - name: Fase de Testes e Qualidade
-      run: echo "Executar os teste de Qualidade!"
+    steps: 
+      - name: Fase de Testes e Qualidade
+        run: echo "Executar os teste de Qualidade!"
 
-homologacao:
-  needs:
-    - dev
-    - aq
-  runs-on: ubuntu-latest
+  homologacao:
+    needs:
+      - dev
+      - aq
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Ambiente de homologacao
-      run: echo "Executando deploy no ambiente de homologacao"
+    steps:
+      - name: Ambiente de homologacao
+        run: echo "Executando deploy no ambiente de homologacao"
 
-producao:
-  needs: homologacao
-  runs-on: ubuntu-latest
+  producao:
+    needs: homologacao
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Deploy Prod 
-      run: echo "Executando deploy Prod"
+    steps:
+      - name: Deploy Prod 
+        run: echo "Executando deploy Prod"
