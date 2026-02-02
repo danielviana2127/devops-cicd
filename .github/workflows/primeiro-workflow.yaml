@@ -48,4 +48,4 @@ producao:
 
   steps:
     - name: Deploy Prod 
-      run: echo "Executando deploy PRD"
+      run: echo "Executando deploy Prod"
