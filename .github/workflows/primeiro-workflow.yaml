@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout de Código
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Build Aplicacao
         run: echo "Buildando a Aplicacao!"
