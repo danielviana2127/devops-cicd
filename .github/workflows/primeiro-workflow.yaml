@@ -39,8 +39,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ambiente de homologacao
-        run: echo "Executando deploy no ambiente de homologacao"
+      - name: Ambiente de Homol 
+        run: echo "Executando deploy no ambiente de Homologacao"
 
   producao:
     needs: homologacao
