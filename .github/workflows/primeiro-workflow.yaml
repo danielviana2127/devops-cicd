@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout de Código
-        uses: action/checkout@v6
+        uses: actions/checkout@v6
 
       - name: Mostrar Mensagem
         run: echo "Olá Mundo! Devops!"
