@@ -35,7 +35,7 @@ jobs:
   homologacao:
     needs:
       - dev
-      - aq
+      - qa
     runs-on: ubuntu-latest
 
     steps:
