@@ -1,0 +1,14 @@
+name: Devops Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+    steps:
+      - name: Checkout de Código
+        uses: action/checkout@v6
+
+    steps:
+      - name: Mostrar Mensagem
+        run: echo "Olá Mundo! Devops!"
